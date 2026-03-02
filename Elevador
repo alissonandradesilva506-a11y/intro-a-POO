@@ -1,0 +1,21 @@
+public class Elevador {
+    int andarAtual = 1;
+    int totalAndares = 6;
+    
+    public void subir(int sobeAndar){
+        int andarsubido= (sobeAndar+andarAtual);
+        if ((andarAtual + sobeAndar)> totalAndares){
+            System.out.println("Você está tentando subir para um andar inexistente.");
+        }
+        andarAtual = andarsubido;
+        System.out.println("Você está no andar " + andarsubido);
+    }
+    public void descer(int desceAndar){
+        int andarDescido = (andarAtual - desceAndar);
+        if ((andarAtual - desceAndar)< 0){
+            System.out.println("Você está tentando descer para um andar inexistente.");
+        }
+        andarAtual = andarDescido;
+        System.out.println("Você está no andar " + andarDescido);           
+    }
+}
